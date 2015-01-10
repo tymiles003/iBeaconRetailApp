@@ -14,6 +14,14 @@ var User = new Schema({
 	{collection : 'users'}
 });
 
+var Item = new Schema({
+	item_id : String,
+	item_name : String,
+	price : String,
+	description: String,
+	category: String
+})
+
 var Request = new Schema({
 	username : String,
 	item_id : String,
@@ -29,6 +37,7 @@ var Notifications = new Schema({
 
 var collections = {
 	User : mongoose.model('User', User),
+	Item : mongoose.model('Item', Item),
 	Request : mongoose.model('Request', Request)
 };
 
